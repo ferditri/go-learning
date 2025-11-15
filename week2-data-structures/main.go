@@ -46,4 +46,40 @@ func main() {
 	nama = append(nama, "Setiawan")
 	fmt.Println("Nama: ", nama)
 
+	// latihan 1
+
+	var nilai []float64
+	var inputNilai, rataRata, hasilRataRata float64
+	var nilaiTerkecil, nilaiTerbesar float64
+
+	for x := 0; x < 5; x++ {
+		fmt.Print("Masukkan nilai ke- ", x+1, ": ")
+		fmt.Scan(&inputNilai)
+		nilai = append(nilai, inputNilai)
+		rataRata += inputNilai
+	}
+	hasilRataRata = rataRata / float64(len(nilai))
+
+	nilaiTerbesar = nilai[0]
+	nilaiTerkecil = nilai[0]
+
+	for x := 0; x < len(nilai); x++ {
+		if nilai[x] > nilaiTerbesar {
+			nilaiTerbesar = nilai[x]
+		}
+		if nilai[x] < nilaiTerkecil {
+			nilaiTerkecil = nilai[x]
+		}
+	}
+
+	fmt.Println("Nilai rata-rata: ", hasilRataRata)
+	fmt.Println("Nilai Terbesar: ", nilaiTerbesar)
+	fmt.Println("Nilai Terkecil: ", nilaiTerkecil)
+
+	for x := 0; x < len(nilai); x++ {
+		if nilai[x] > hasilRataRata {
+			fmt.Println("Nilai yang diatas Rata-rata: ", nilai[x])
+		}
+	}
+
 }
