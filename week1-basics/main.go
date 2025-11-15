@@ -78,4 +78,26 @@ func main() {
 		fmt.Println("Tidak Lulus")
 	}
 
+	// latihan 5
+
+	var barang, jumlah, total, diskon, hasilAkhir float64
+
+	barang = 5000
+	jumlah = 40
+	total = barang * jumlah
+
+	if total >= 500000 {
+		diskon = total * 20 / 100
+	} else if total >= 200000 {
+		diskon = total * 10 / 100
+	} else if total >= 100000 {
+		diskon = total * 5 / 100
+	}
+
+	hasilAkhir = total - diskon
+
+	fmt.Println("Diskon: ", diskon)
+	fmt.Println("Total: ", total)
+	fmt.Println("Total Akhir: ", hasilAkhir)
+
 }
