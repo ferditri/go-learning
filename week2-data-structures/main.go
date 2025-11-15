@@ -28,4 +28,22 @@ func main() {
 	for index, value := range buah {
 		fmt.Printf("%d. %s\n", index+1, value)
 	}
+
+	// slices
+
+	angka := []int{12, 43, 77, 40, 100}
+	fmt.Println("Slice: ", angka)
+
+	angka = append(angka, 15, 66, 88)
+	fmt.Println("Setelah Append: ", angka)
+
+	subset := angka[2:5]
+	fmt.Println("[2:5]: ", subset)
+
+	var nama []string
+	nama = append(nama, "Ferdi")
+	nama = append(nama, "Tri")
+	nama = append(nama, "Setiawan")
+	fmt.Println("Nama: ", nama)
+
 }
