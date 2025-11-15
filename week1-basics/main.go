@@ -100,4 +100,12 @@ func main() {
 	fmt.Println("Total: ", total)
 	fmt.Println("Total Akhir: ", hasilAkhir)
 
+	// latihan 6
+
+	for x := 1; x <= 10; x++ {
+		for y := 1; y <= 10; y++ {
+			fmt.Println(x, " x ", y, " = ", x*y)
+		}
+	}
+
 }
