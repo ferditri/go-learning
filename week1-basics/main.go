@@ -48,4 +48,34 @@ func main() {
 	fmt.Println("Fahrenheit: ", fahrenheit)
 	fmt.Println("Kelvin: ", kelvin)
 
+	// latihan 4
+
+	var (
+		UTS float64 = 40
+		UAS float64 = 60
+	)
+
+	var nilaiUTS, nilaiUAS float64 = 80, 76
+
+	hasil := (nilaiUTS * (UTS / 100)) + (nilaiUAS * (UAS / 100))
+
+	var grade rune
+	if hasil >= 85 {
+		grade = 'A'
+	} else if hasil >= 70 {
+		grade = 'B'
+	} else if hasil >= 60 {
+		grade = 'C'
+	} else if hasil >= 50 {
+		grade = 'D'
+	} else {
+		grade = 'E'
+	}
+
+	if grade == 'A' || grade == 'B' {
+		fmt.Println("LULUS")
+	} else {
+		fmt.Println("Tidak Lulus")
+	}
+
 }
